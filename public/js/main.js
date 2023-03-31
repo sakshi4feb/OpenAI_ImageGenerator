@@ -23,6 +23,7 @@ async function generateImageRequest(prompt, size) {
       },
       body: JSON.stringify({ prompt, size }),
     });
+
     if (!response.ok) {
       throw new Error("Image could not be generated");
       removeSpinner();

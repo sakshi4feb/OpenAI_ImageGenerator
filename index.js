@@ -1,5 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv").config();
+const path = require("path");
 const openaiRouter = require("./routes/openaiRoutes");
 var bodyParser = require("body-parser");
 
@@ -9,6 +10,8 @@ const app = express();
 
 // create application/json parser
 app.use(bodyParser.json());
+
+app.use(express.static(path.join(__dirname, "public")));
 
 // create application/x-www-form-urlencoded parser
 app.use(bodyParser.urlencoded({ extended: false }));
