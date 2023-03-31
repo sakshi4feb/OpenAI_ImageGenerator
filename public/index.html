@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/spinner.css">
+    <title>Openai Image Generator</title>
+</head>
+<body>
+    <header>
+        <h2>Image Generator - Open AI</h2>
+        <navbar>
+            <ul><li><a href="https://beta.openai.com/" target="_blank">OpenAI Docs</a></li></ul>
+        </navbar>
+    </header>
+    <main>
+        <section>
+            <form id="image-form">
+                <div>
+                  <label for="prompt">Describe an image:</label>
+                  <input type="text" id="prompt" placeholder="Enter Text">
+                </div>
+                <div>
+                    <label for="size">Choose size:</label>
+                    <select name="size" id="size">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>
+                <button type="submit">Generate Image</button>
+            </form>
+        </section>
+        <section>
+                <div id="img">
+                    <h2 id="msg">
+                    </h2>
+                    <img src="" alt="" id="image">
+                </div>
+        </section>
+    </main>
+    <div class="spinner"></div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
